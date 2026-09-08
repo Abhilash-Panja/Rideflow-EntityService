@@ -111,11 +111,10 @@ ADMIN
 ```mermaid
 erDiagram
     PASSENGER ||--o{ BOOKING : creates
-    DRIVER ||--o{ BOOKING : accepts
+    DRIVER ||--o{ BOOKING : serves
+    BOOKING ||--|| EXACT_LOCATION : startLocation
+    BOOKING ||--|| EXACT_LOCATION : endLocation
     DRIVER ||--o| CAR : owns
-    BOOKING ||--o| EXACT_LOCATION : start
-    BOOKING ||--o| EXACT_LOCATION : end
-    BOOKING ||--o| REVIEW : receives
 ```
 
 A booking currently connects:
