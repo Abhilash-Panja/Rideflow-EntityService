@@ -22,7 +22,7 @@ public class Passenger extends BaseModel{
     @Column(nullable = false)
     private String passengerName;
 
-    @Column(nullable = false)
+    @Column(nullable = false, unique = true)
     private String email;
 
     @Column(nullable = false)
